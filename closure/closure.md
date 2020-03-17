@@ -6,7 +6,7 @@
 	 var blab = function(){
 	   alert(string);
 	 };
-	 ```
+	```
 
 1. In your function, `nonsense`, change the immediate call to a setTimeout so that the call to `blab` comes after 2 seconds. The `blab` function itself should stay the same as before.
 
@@ -16,7 +16,9 @@
 
 
 1. Write a function with a closure. The first function should only take one argument, someone's first name, and the inner function should take one more argument, someone's last name. The inner function should console.log both the first name and the last name.
-	```javascript
+	
+```javascript
+
 	var lastNameTrier = function(firstName){
 	   //does stuff
 
@@ -27,7 +29,9 @@
 	};
 	var firstNameFarmer = lastNameTrier('Farmer'); //logs nothing
 	firstNameFarmer('Brown'); //logs 'Farmer Brown'
-	```
+
+```
+
 	This function is useful in case you want to try on different last names. For example, I could use firstName again with another last name:
 
 	```javascript
@@ -37,7 +41,8 @@
 
 
 1. Create a `storyWriter` function that returns an object with two methods. One method, `addWords` adds a word to your story and returns the story while the other one, `erase`, resets the story back to an empty string. Here is an implementation:
-	```javascript
+```javascript
+
 	var farmLoveStory = storyWriter();
 	farmLoveStory.addWords('There was once a lonely cow.'); // 'There was once a lonely cow.'
 	farmLoveStory.addWords('It saw a friendly face.'); //'There was once a lonely cow. It saw a friendly face.'
@@ -47,4 +52,4 @@
 	storyOfMyLife.addWords('I ate some ice cream.'); //'My code broke. I ate some ice cream.'
 	storyOfMyLife.erase(); // ''
 
-	```
+```
