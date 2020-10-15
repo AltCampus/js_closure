@@ -2,12 +2,24 @@
 let arrays = [[1, 2, 3], [4, 5], [6]];
 
 // Your code here.
+arrays.reduce((a, c) => a.concat(c), []);
 // → [1, 2, 3, 4, 5, 6]
 
 // Challenge 2. Your own loop
-// Your code here.
 
 loop(3, n => n > 0, n => n - 1, console.log);
+// Your code here.
+
+function loop(num, test, test2, op){
+  for(let i = 0; i <= num; i++){
+    if(test(i)){
+      op(i);
+      num = test2(num)
+
+    }
+  }
+}
+
 // → 3
 // → 2
 // → 1
@@ -15,7 +27,13 @@ loop(3, n => n > 0, n => n - 1, console.log);
 // Challenge 3. Everything
 function every(array, test) {
   // Your code here.
-}
+  let result = true
+  for(let item of array){
+     result = result && test(item)
+  }
+  return result;
+ }
+
 
 console.log(every([1, 3, 5], n => n < 10));
 // → true
